@@ -34,7 +34,7 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
         }
 
     return ( 
-        <div className="product pt-20 pr-4 py-10 lg:px-8">
+        <div className="product pt-20 py-10 lg:px-8">
                 <div className="product-section-1">
                         <div className="gallery">
                             <Gallery images={product.images} /> 
