@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import './product-card.css'
 import { Check, Ellipsis, Star, StarHalf } from "lucide-react";
 import { ReviewCardProps } from "@/types";
 
