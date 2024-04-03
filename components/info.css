@@ -1,10 +1,12 @@
 .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 36px;
     width: 36px;
     border-radius: 100%;
     cursor: pointer;
     background-color: white;
-    padding: 2px 3px;   
     border: 2px solid white;
     transition-duration: .2s;
 }
@@ -21,12 +23,14 @@
 }
 
 .size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 44px;
     width: 44px;
     border-radius: 100%;
     cursor: pointer;
     background-color: white;
-    padding: 2px 3px;   
     border: 2px solid white;
     transition-duration: .2s;
 }
