@@ -1,0 +1,217 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    padding: 5px 0;
+    transition: 0.2s linear;
+    position: relative;
+    color: rgb(111, 111, 111);
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover {
+    color: black;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+
+.dropdown {
+    visibility: hidden;
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(181, 179, 179, 0.504);
+    position: absolute;
+    flex-direction: column;
+    padding: 10px 15px;
+    width: 140px;
+    opacity: 0%;
+    top: 55px;
+    transform: scale(.8);
+    transition-duration: .1s;
+    z-index: -100;
+    /* -webkit-transition-duration: .1s; */
+}
+
+.nav-item:hover .dropdown {
+    visibility: visible;
+    display: flex;
+    top: 55px;
+    opacity: 100%;
+    transform: scale(1);
+    transition-duration: .2s;
+    /* -webkit-transition-duration: .1s; */
+}
+.arrow {
+    opacity: 100%;
+    transition-duration: .2s;
+}
+.nav-item:hover .arrow {
+    opacity: 0;
+    transition-duration: .2s;
+}
+
+.dropdown a {
+    color: rgb(111, 111, 111);
+    font-weight: 400;
+    transition-duration: .2s;
+    margin: 3px 0 ;
+}
+.dropdown a:hover {
+    color: rgb(7, 7, 7);
+    font-weight: 700;
+    transition-duration: .2s;
+}
+
+.navbar-large {
+    display: flex;
+}
+.navbar-small {
+    display: none;
+}
+.secondary-links {
+    padding-left: 40px;
+}
+
+ @media (max-width: 1460px) { 
+    .drawer-bg {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #00000082;
+        z-index: 51;
+    }
+    .cross {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .drawer-on {
+        position: fixed;
+        background: white;
+        height: 100%;
+        width: 450px;
+        z-index: 51;
+        left: 0;
+        transition-duration: .5s;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .drawer-off {
+        position: fixed;
+        background: white;
+        left: -600px;
+        height: 100%;
+        width: 450px;
+        z-index: 51;
+        transition-duration: .5s
+    }
+    .navbar-large {
+        display: none;
+    }
+    .navbar-small {
+        display: block;
+    }
+    .navbar-small button {
+        position: fixed;
+        top: 15px;
+    }
+    .drawer-on div {
+        margin-top: 20px;
+        padding-left: 20px;
+    }
+    .nav-item {
+        width: 50%;
+        padding: 5px 0;
+        transition: 0.2s linear;
+        position: relative;
+        color: rgb(111, 111, 111);
+        display: flex;
+        align-items: center;
+    }
+    .sm-drop {
+        color: rgb(111, 111, 111);
+    }
+    .shop-on {
+        position: relative;
+        margin-left: 15px;
+        color: rgb(111, 111, 111);
+        left: 20px;
+        transition-duration: .2s;
+    }
+    .shop-off {
+        position: absolute;
+        margin-left: 15px;
+        color: rgb(111, 111, 111);
+        left: -200px;
+        transition-duration: .2s;
+    }
+    .shop-space-on {
+        height: 145px;
+        transition-duration: .2s;
+    }
+    .shop-space-off  {
+        height: 25px;
+        transition-duration: .2s;
+
+    }
+    .arrow-up {
+        margin-left: 5px;
+        transform: rotate(180deg);
+        transition: 0.2s linear;
+    }
+    .arrow-down {
+        margin-left: 5px;
+        transform: rotate(0deg);
+        transition: 0.2s linear;
+    }
+    .secondary-links {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 900px) { 
+    .secondary-links {
+        padding-left: 15px;
+    }
+    
+}
+@media (max-width: 650px) { 
+    .secondary-links {
+        padding-left: 15px;
+    }
+    .drawer-on {
+        position: fixed;
+        background: white;
+        height: 100%;
+        width: 250px;
+        z-index: 51;
+        left: 0;
+        transition-duration: .5s;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .drawer-off {
+        position: fixed;
+        background: white;
+        left: -600px;
+        height: 100%;
+        width: 250px;
+        z-index: 51;
+        transition-duration: .5s
+    }
+    
+}
+@media (max-width: 600px) { 
+
+    .header-container div {
+        width: fit-content;
+    }
+}
+
+ 
+
+

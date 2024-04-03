@@ -1,0 +1,14 @@
+.card-image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+}
+
+@media (max-width: 1150px) { 
+    .card-image {
+        position: relative;
+        width: 220px;
+        height: 220px;
+    }
+}
+

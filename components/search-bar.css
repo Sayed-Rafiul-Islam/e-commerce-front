@@ -1,0 +1,192 @@
+.search-bar {
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 20px;
+    background: rgb(237, 237, 237);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.search-bar:focus {
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+.search-icon {
+    display: none;
+}
+.sm-search-bar-on {
+    display: none ;
+}
+.sm-search-bar-off {
+    display: none ;
+}
+
+.search-bar-on {
+    position: absolute; 
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    padding-block: 4px;
+    top: 50px;
+    right: 90px;
+    border-radius: 10px;
+    opacity: 100%;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+.search-bar-off {
+    position: absolute; 
+    display: flex;
+    justify-content: space-evenly;
+    width: 30%;
+    padding-block: 4px;
+    top: 50px;
+    right: 90px;
+    border-radius: 10px;
+    opacity: 0%;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+.cancel-btn {
+    color: white;
+    background: rgb(218, 1, 1);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.cancel-btn:hover {
+    color: white;
+    background: red;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.search-btn {
+    color: white;
+    background: rgb(42, 42, 42);
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.search-btn:hover {
+    color: white;
+    background: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+@media (max-width: 900px) { 
+    .search-bar-on {
+        position: absolute; 
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+        padding-block: 4px;
+        top: 50px;
+        right: 80px;
+        border-radius: 10px;
+        opacity: 100%;
+        transition-duration: 0.5s;
+        z-index: 1;
+    }
+    .search-bar-off {
+        position: absolute; 
+        display: flex;
+        justify-content: space-evenly;
+        width: 30%;
+        padding-block: 4px;
+        top: 50px;
+        right: 80px;
+        border-radius: 10px;
+        opacity: 0%;
+        transition-duration: 0.5s;
+        z-index: 1;
+    }
+    .cancel-btn {
+        color: white;
+        background: red;
+    }
+}
+
+@media (max-width: 600px) { 
+    .search-bar-on {
+        display: none;
+    }
+    .search-bar-off {
+        display: none;
+    }
+    .sm-search-bar-on {
+        padding-block: 10px;
+        top: 60px;
+        right: 20px;
+        position: absolute; 
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background: rgb(237, 237, 237);
+        opacity: 100%;
+        transition-duration: 0.5s;
+        width: 100%;
+        z-index: 1;
+
+    }
+    .sm-search-bar-off {
+        padding-block: 10px;
+        top: 60px;
+        right: 20px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        background: rgb(237, 237, 237);
+        opacity: 0;
+        transition-duration: 0.5s;
+        width: 100%;
+        z-index: -1;
+    }
+    .sm-search-bar-on div {
+        margin-block: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        transition-duration: 0.5s;
+
+    }
+    .sm-search-bar-off div {
+        margin-block: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        transition-duration: 0.5s;
+
+    }
+    .sm-search-bar-off input {
+        height: 35px;
+        border-radius: 10px;
+        padding-left: 20px;
+        background: rgb(237, 237, 237);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        width: 75%;
+        margin-inline: auto;
+        outline : auto;
+        transition-duration: 0.5s;
+    }
+    .sm-search-bar-on input {
+        height: 35px;
+        border-radius: 10px;
+        padding-left: 20px;
+        background: rgb(237, 237, 237);
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        width: 75%;
+        margin-inline: auto;
+        outline : auto;
+        transition-duration: 0.5s;
+    }
+    .search-bar {
+        display: none;
+    }
+    .search-icon {
+        display: block;
+    }
+}

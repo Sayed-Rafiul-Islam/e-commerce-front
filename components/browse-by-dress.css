@@ -1,0 +1,142 @@
+.casual-image {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.casual-image:hover {
+    box-shadow: 15px 15px 15px gray;
+    transform: scale(1.02);
+}
+.formal-image {
+    position: relative;
+    width: 60%;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: .3s;
+}
+.formal-image:hover {
+    box-shadow: 15px 15px 15px gray;
+    transform: scale(1.02);
+}
+.party-image {
+    position: relative;
+    width: 60%;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: .3s;
+}
+.party-image:hover {
+    box-shadow: 15px 15px 15px gray;
+    transform: scale(1.02);
+}
+.gym-image {
+    position: relative;
+    width: 40%;
+    height: 300px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition-duration: .3s;
+}
+.gym-image:hover {
+    box-shadow: 15px 15px 15px gray;
+    transform: scale(1.02);
+}
+
+@media (max-width: 1100px) { 
+    .casual-image {
+        position: relative;
+        width: 40%;
+        height: 200px;
+        border-radius: 50px;
+    }
+    .formal-image {
+        position: relative;
+        width: 60%;
+        height: 200px;
+    }
+    .party-image {
+        position: relative;
+        width: 60%;
+        height: 200px;
+    }
+    .gym-image {
+        position: relative;
+        width: 40%;
+        height: 200px;
+    }
+}
+@media (max-width: 850px) { 
+    .casual-image {
+        position: relative;
+        width: 40%;
+        height: 150px;
+        border-radius: 50px;
+    }
+    .formal-image {
+        position: relative;
+        width: 60%;
+        height: 150px;
+    }
+    .party-image {
+        position: relative;
+        width: 60%;
+        height: 150px;
+    }
+    .gym-image {
+        position: relative;
+        width: 40%;
+        height: 150px;
+    }
+}
+@media (max-width: 767px) { 
+    .casual-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+        border-radius: 50px;
+    }
+    .formal-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    .party-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+    .gym-image {
+        position: relative;
+        width: 100%;
+        height: 250px;
+    }
+}
+@media (max-width: 600px) { 
+    .casual-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+        border-radius: 50px;
+    }
+    .formal-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+    .party-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+    .gym-image {
+        position: relative;
+        width: 100%;
+        height: 150px;
+    }
+}
+
