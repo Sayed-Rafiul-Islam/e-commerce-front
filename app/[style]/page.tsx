@@ -202,25 +202,9 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
 
 
     return ( 
-        <div className="style-page">
-            
-            
-            <Breadcrumb className="ml-6 mb-6 text-gray-400">
-                    <BreadcrumbList>
-                        <BreadcrumbItem>
-                        <   BreadcrumbLink href="/">Home</BreadcrumbLink>
-                        </BreadcrumbItem>
-
-                        <BreadcrumbSeparator />
-
-                        <BreadcrumbItem>
-                            <BreadcrumbPage>{style}</BreadcrumbPage>
-                        </BreadcrumbItem>
-                    </BreadcrumbList>
-            </Breadcrumb>
-            
-        <section className="flex gap-2">
-        <Drawer direction="bottom">
+        <div className="relative">
+            <div className="fixed">
+            <Drawer direction="bottom">
             <DrawerTrigger className="filter-toggle" asChild>
                 <Button variant="outline" size="icon">
                     <SlidersHorizontal />
@@ -339,6 +323,27 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                 <Button className="lg:w-1/2 md:w-2/3 w-5/6 mx-auto rounded-3xl my-5">Apply Filters</Button>
             </DrawerContent>
             </Drawer>
+            </div>
+            <div className="style-page">
+
+            
+            
+            <Breadcrumb className="ml-6 mb-6 text-gray-400">
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                        <   BreadcrumbLink href="/">Home</BreadcrumbLink>
+                        </BreadcrumbItem>
+
+                        <BreadcrumbSeparator />
+
+                        <BreadcrumbItem>
+                            <BreadcrumbPage>{style}</BreadcrumbPage>
+                        </BreadcrumbItem>
+                    </BreadcrumbList>
+            </Breadcrumb>
+            
+        <section className="flex gap-2">
+        
             
             {/* filters  */}
             
@@ -478,6 +483,9 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
             </div>
         </section>
         </div>
+
+        </div>
+        
      );
 }
  
