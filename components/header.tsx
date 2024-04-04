@@ -159,8 +159,8 @@ const Header = () => {
                                 <SearchBar />
                             </div>
                             <div className="flex w-1/4 secondary-links gap-x-4">
-                                <button onClick={()=>router.push('/cart')}><ShoppingCart /></button>
-                                <button><CircleUserRound /></button>
+                                <button className="text-gray-500 hover:text-black transition-all" onClick={()=>router.push('/cart')}><ShoppingCart /></button>
+                                <button className="text-gray-500 hover:text-black transition-all"><CircleUserRound /></button>
                             </div>
                         </div>
                     </div>

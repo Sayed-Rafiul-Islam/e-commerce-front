@@ -125,7 +125,7 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
                         </div>
                 </div>
                 <div className="product-section-2">
-                    <Tabs defaultValue="details" className="w-full">
+                    <Tabs defaultValue="reviews" className="w-full">
                         <TabsList className="grid grid-cols-3">
                             <TabsTrigger value="details">Product Details</TabsTrigger>
                             <TabsTrigger value="reviews">Reviews</TabsTrigger>

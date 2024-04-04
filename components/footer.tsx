@@ -9,6 +9,8 @@ import master from '@/images/cards/master.png'
 import paypal from '@/images/cards/paypal.png'
 import apple from '@/images/cards/apple pay.png'
 import google from '@/images/cards/google pay.png'
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Footer = () => {
     return ( 
@@ -38,35 +40,35 @@ const Footer = () => {
                 </div>
                 <div className="col-type-2">
                     <h4 className="font-bold">COMPANY</h4>
-                    <h6 className="text-xs text-gray-600 my-2">About</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Features</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Works</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Carrer</h6>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">About</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Features</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Works</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Carrer</Link>
                 </div>
                 <div className="col-type-2">
                     <h4 className="font-bold">HELP</h4>
-                    <h6 className="text-xs text-gray-600 my-2">Customer Support</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Delivary Details</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Terms & Services</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Privacy Policy</h6>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Customer Support</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Delivary Details</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Terms & Services</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Privacy Policy</Link>
                 </div>
                 <div className="col-type-2">
                     <h4 className="font-bold">FAQ</h4>
-                    <h6 className="text-xs text-gray-600 my-2">Account</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Manage Delivaries</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Orders</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Payments</h6>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Account</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Manage Delivaries</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Orders</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Payments</Link>
                 </div>
                 <div className="col-type-2">
                     <h4 className="font-bold">RESOURCES</h4>
-                    <h6 className="text-xs text-gray-600 my-2">Free eBooks</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Development Tutorials</h6>
-                    <h6 className="text-xs text-gray-600 my-2">How to - Blog</h6>
-                    <h6 className="text-xs text-gray-600 my-2">Youtube Playlist</h6>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Free eBooks</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Development Tutorials</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">How to - Blog</Link>
+                    <Link href='#' className="text-xs text-gray-600 my-2 hover:text-black transition-all block">Youtube Playlist</Link>
                 </div>
             </div>
             <div className="mt-3 flex justify-between items-center footer-part-2">
-                <h6 className="text-gray-600">Shop.co © 2000-2023, All Rights Reserved</h6>
+                <Link href='#' className="text-gray-600">Shop.co © 2 hover:text-black transition-all block000-2023, All Rights Reserved</Link>
                 <div className="cards">
                 <div className="card">
                     <Image fill src={visa} alt="card" />
@@ -90,7 +92,7 @@ const Footer = () => {
                 <h1 className="text-5xl font-bold text-white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h1>
                 <div>
                     <input placeholder="Enter your email address" type="text" />
-                    <button>Subscribe to Newsletter</button>
+                    <Button variant='ghost' >Subscribe to Newsletter</Button>
                 </div>
             </div>
             

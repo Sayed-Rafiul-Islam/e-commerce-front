@@ -1,15 +1,15 @@
 "use client"
 
-import { ChevronDown, SlidersHorizontal } from "lucide-react";
+import {  SlidersHorizontal } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import ReviewCard from "./review-card";
 import { ReviewCardProps } from "@/types";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
 
 
 const Reviews = () => {
 
-    const sortOptions = ["Latest","All Reviews","Oldest"]
     const reviews = [
         {
             id : 1,
@@ -41,14 +41,44 @@ const Reviews = () => {
         },
     ]
 
-    const [sortBy,setSortBy] = useState(sortOptions[0])
+    const selects = [
+        {
+            id : 1,
+            label : "All Reviews",
+            value : "all"
+        },
+        {
+            id : 2,
+            label : "Latest",
+            value : "latest"
+        },
+        {
+            id : 3,
+            label : "Oldest",
+            value : "oldest"
+        }
+    ]
+    // const [sortBy,setSortBy] = useState(sortOptions[0])
     return ( 
         <div className="mt-8 w-11/12 mx-auto flex flex-col">
             <div className="flex justify-between items-center">
                 <h3 className="font-bold">All Reviews <span className="text-xs font-medium text-gray-400">({reviews.length})</span></h3>
-                <div className="flex gap-x-6">
+                <div className="flex items-center gap-x-6">
                     <button><SlidersHorizontal /></button>
-                    <button className="hidden items-center md:flex">{sortBy} <ChevronDown size={15}/></button>
+                    {/* <button className="hidden items-center md:flex">{sortBy} <ChevronDown size={15}/></button> */}
+                    <Select>
+                                <SelectTrigger className="w-32 h-7 border-none text-xs">
+                                    <SelectValue placeholder={selects[0].label} />
+                                </SelectTrigger>
+
+                                <SelectContent>
+                                    {
+                                        selects.map(({id,label,value}) =>
+                                        <SelectItem key={id} className="h-7 text-xs" value={value}>{label}</SelectItem>
+                                        )
+                                    }
+                                </SelectContent>
+                            </Select>
                     <Button size='sm'>Write a Review</Button>
                 </div>
             </div>

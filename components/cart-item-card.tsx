@@ -37,7 +37,7 @@ const CartItemCard : React.FC<ProductCardProps> = ({
                 </div>
             </div>
             <div className="flex flex-col justify-between items-end mb-4">
-                <button><Trash2 /></button>
+                <button className="hover:text-red-700 hover:scale-105 transition-all"><Trash2 /></button>
                 <div className='amount'>
                         <button onClick={()=>setAmount(amount + 1)}><Plus size={15}/></button>
                         <h4 className='text-xs'>{amount}</h4>
