@@ -15,6 +15,16 @@ import './product.css'
 import Reviews from "@/components/reviews";
 import SuggestedItems from "@/components/suggested-items";
 
+import {
+    Breadcrumb,
+    BreadcrumbItem,
+    BreadcrumbLink,
+    BreadcrumbList,
+    BreadcrumbPage,
+    BreadcrumbSeparator,
+  } from "@/components/ui/breadcrumb"
+  
+
 interface ProductPageProps {
     params : {
         productId : string
@@ -35,6 +45,33 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
 
     return ( 
         <div className="product pt-20 py-10 lg:px-8">
+                <Breadcrumb className="ml-6 mb-6 text-gray-400">
+                    <BreadcrumbList>
+                        <BreadcrumbItem>
+                        <   BreadcrumbLink href="/">Home</BreadcrumbLink>
+                        </BreadcrumbItem>
+
+                        <BreadcrumbSeparator />
+
+                        <BreadcrumbItem>
+                            <BreadcrumbLink href="/components">Shop</BreadcrumbLink>
+                        </BreadcrumbItem>
+
+                        <BreadcrumbSeparator />
+
+                        <BreadcrumbItem>
+                            <BreadcrumbLink href="/tshirt">T-Shirt</BreadcrumbLink>
+                        </BreadcrumbItem>
+
+                        <BreadcrumbSeparator />
+
+                        <BreadcrumbItem>
+                            <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+                        </BreadcrumbItem>
+
+                    </BreadcrumbList>
+                </Breadcrumb>
+
                 <div className="product-section-1">
                         <div className="gallery">
                             <Gallery images={product.images} /> 

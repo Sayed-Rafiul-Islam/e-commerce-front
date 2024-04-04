@@ -1,0 +1,66 @@
+.filters {
+    width: 20%;
+    height: 800px;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 20px;
+}
+.style {
+    width: 80%;
+    height: 800px;
+    background: blue;
+}
+
+
+/* --------------------------------------------- slider */
+
+.slider {
+    position: relative;
+    height: 5px;
+    border-radius: 5px;
+    background: #ddd;
+}
+
+.slider .progress {
+    position: absolute;
+    height: 5px;
+    border-radius: 5px;
+    background: black;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    height: 5px;
+    top: -5px;
+    width: 100%;
+    pointer-events: none;
+    background: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    pointer-events: auto;
+    appearance: none;
+    -webkit-appearance: none;
+    background: black;
+}
+
+input[type='range']::-moz-slider-thumb {
+    height: 17px;
+    width: 17px;
+    border: none;
+    border-radius: 50%;
+    pointer-events: auto;
+    -moz-appearance: none;
+    background: black;
+}
+
+
+
