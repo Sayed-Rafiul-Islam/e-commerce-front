@@ -1,0 +1,25 @@
+.promo {
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    background: rgb(237, 237, 237);
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.promo:focus {
+    background-color: inherit;
+    border-bottom: 1px solid black;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+@media (max-width: 750px) { 
+    .cart-page {
+        flex-direction: column;
+    }
+    .cart-page section {
+        width: 100%;
+    }
+}

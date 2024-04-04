@@ -1,0 +1,23 @@
+.item-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+.amount {
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    column-gap: 10px;
+    background: rgb(223, 223, 223);
+    padding: 7px 15px;
+    width: fit-content;
+    border-radius: 30px;
+}
+
+@media (max-width: 1025px) { 
+    .item-image {
+        position: relative;
+        width: 100px;
+        height: 100px;
+    }
+}
