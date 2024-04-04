@@ -63,4 +63,63 @@ input[type='range']::-moz-slider-thumb {
 }
 
 
+.color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 36px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid white;
+    transition-duration: .2s;
+}
+.color div {
+    border: .5px solid rgb(209, 209, 209);
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.color:hover {
+    border: 2px solid black;  
+    transition-duration: .2s;
+}
+
+.size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 44px;
+    width: 44px;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid white;
+    transition-duration: .2s;
+}
+.size:hover {
+    border: 2px solid black;
+    transition-duration: .2s;
+}
+
+.size h2 {
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    padding: 8px 2px;  
+    border-radius: 100%;
+    cursor: pointer; 
+}
+
+.selected {
+    border: 2px solid black;  
+}
+
+
 
