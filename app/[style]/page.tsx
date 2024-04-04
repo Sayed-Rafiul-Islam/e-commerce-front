@@ -203,7 +203,7 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
 
     return ( 
         <div className="relative">
-            <div className="fixed">
+            <div className="fixed z-50">
             <Drawer direction="bottom">
             <DrawerTrigger className="filter-toggle" asChild>
                 <Button variant="outline" size="icon">
@@ -320,7 +320,9 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                     </Accordion>
                 </div>
 
-                <Button className="lg:w-1/2 md:w-2/3 w-5/6 mx-auto rounded-3xl my-5">Apply Filters</Button>
+                <DrawerClose>
+                    <Button className="w-full rounded-3xl mt-5">Apply Filters</Button>
+                </DrawerClose>
             </DrawerContent>
             </Drawer>
             </div>
@@ -448,8 +450,8 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         </AccordionItem>
                     </Accordion>
                 </div>
-
                 <Button className="w-full rounded-3xl mt-5">Apply Filters</Button>
+               
             </div>
 
             {/* Style  */}
