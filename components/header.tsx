@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import './header.css'
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ChevronDown, CircleUserRound, Menu, ShoppingCart, X } from "lucide-react";
 import SearchBar from "./search-bar";
 
 const Header = () => {
 
+    const router = useRouter()
     const pathname = usePathname()
     const [ navbar, setNavbar] = useState(false)
     const [sidenav,setSidenav] = useState(false)
@@ -158,7 +159,7 @@ const Header = () => {
                                 <SearchBar />
                             </div>
                             <div className="flex w-1/4 secondary-links gap-x-4">
-                                <button><ShoppingCart /></button>
+                                <button onClick={()=>router.push('/cart')}><ShoppingCart /></button>
                                 <button><CircleUserRound /></button>
                             </div>
                         </div>

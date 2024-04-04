@@ -2,6 +2,24 @@
     position: relative;
     width: 250px;
     height: 250px;
+    transform: scale(1);
+    transition-duration: .2s;
+    overflow: hidden;
+}
+.card-image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform: scale(1);
+    transition-duration: .2s;
+    overflow: hidden;
+}
+.card-image:hover img {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    transform: scale(1.2);
+    transition-duration: .2s;
 }
 
 @media (max-width: 1150px) { 

@@ -1,6 +1,8 @@
+"use client"
 import Image, { StaticImageData } from "next/image";
 import './product-card.css'
 import { Star, StarHalf } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 interface ProductCardProps {
     id : number,
@@ -20,12 +22,13 @@ const ProductCard : React.FC<ProductCardProps> = ({
     price,
     discount
 }) => {
+    const router = useRouter()
     const ifHalf = Boolean(Math.floor(rating) - rating)
     const stars = Array.from({length: Math.floor(rating)}, (v, i) => i) 
     const discountPrice = price - (price*discount/100)
     return ( 
         <div className="mx-auto m-4">
-            <div className="card-image">
+            <div onClick={()=>router.push(`/shop/${id}`)} className="card-image cursor-pointer">
                 <Image src={image} alt="image" fill/>
             </div>
             <h4 className="mt-2">{label}</h4>
