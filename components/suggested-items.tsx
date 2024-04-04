@@ -43,7 +43,7 @@ const SuggestedItems = () => {
         },
     ]
     return ( 
-        <div className='new-arrivals'>
+        <div className='suggested'>
             <div className='grid lg:grid-cols-4 md:grid-cols-2 mt-10 w-11/12 mx-auto'>
                 {
                     products.map(({id,label,image,rating,price,discount}) => 

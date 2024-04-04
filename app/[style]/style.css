@@ -1,13 +1,17 @@
 .filters {
     width: 20%;
-    height: 800px;
+    height: 100%;
     border: 1px solid rgb(231, 231, 231);
     border-radius: 20px;
+    padding-bottom: 20px;
+    padding-inline: 20px;
 }
 .style {
     width: 80%;
-    height: 800px;
-    background: blue;
+}
+
+.style-heading {
+    padding: 0px 35px ;
 }
 
 
@@ -120,6 +124,46 @@ input[type='range']::-moz-slider-thumb {
 .selected {
     border: 2px solid black;  
 }
+
+
+@media (max-width: 1370px) { 
+    .filters {
+        width: 20%;
+        height: 100%;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 20px;
+        padding-bottom: 20px;
+        padding-inline: 10px;
+    }
+    .style {
+        width: 80%;
+    }
+    
+    .style-heading {
+        padding: 0px 35px ;
+    }
+}
+@media (max-width: 900px) { 
+    .filters-heading > svg {
+        
+    }
+    .filters {
+        width: 20%;
+        height: 100%;
+        border: 1px solid rgb(231, 231, 231);
+        border-radius: 20px;
+        padding-bottom: 20px;
+        padding-inline: 10px;
+    }
+    .style {
+        width: 80%;
+    }
+    
+    .style-heading {
+        padding: 0px 35px ;
+    }
+}
+
 
 
 
