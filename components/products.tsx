@@ -155,12 +155,10 @@ const Products = () => {
 
 
     const pageCount = Math.ceil(products.length / 10)
-    // const pageCount = 10
     const pages = Array.from({length: pageCount}, (v, i) => i) 
     const [page, setPage] = useState(0) 
     const [items,setItems] = useState([])
 
-    console.log(page,pages.length -1)
     useEffect(()=>{
         const show : any = products.slice(page*10,(page + 1)*10)
         setItems(show)

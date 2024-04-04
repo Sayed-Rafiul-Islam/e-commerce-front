@@ -11,7 +11,8 @@
 }
 
 .style-heading {
-    padding: 0px 35px ;
+    width: 90%;
+    margin-inline: auto;
 }
 
 
@@ -125,16 +126,54 @@ input[type='range']::-moz-slider-thumb {
     border: 2px solid black;  
 }
 
+.style-page {
+    width: 90%;
+    margin-inline: auto;
+    padding-block: 80px ;
+}
+
+.colors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.filter-toggle {
+    display: none;
+}
 
 @media (max-width: 1370px) { 
-    .filters {
-        width: 20%;
-        height: 100%;
-        border: 1px solid rgb(231, 231, 231);
-        border-radius: 20px;
-        padding-bottom: 20px;
-        padding-inline: 10px;
+    .style-heading {
+        width: 95%;
+        margin-inline: auto;
     }
+}
+
+@media (max-width: 1280px) { 
+    .style-page {
+        width: 90%;
+        margin-inline: auto;
+        padding-block: 50px ;
+    }
+    .style {
+        width: 100%;
+    }
+    .genre > a > h4 {
+        font-size: 12px;
+    }
+    .dress-style  h4 {
+        font-size: 12px;
+    }
+    .slider > h3 {
+        font-size: 10px;
+    }
+
+    .colors-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+
+}
+@media (max-width: 1000px) { 
     .style {
         width: 80%;
     }
@@ -143,24 +182,61 @@ input[type='range']::-moz-slider-thumb {
         padding: 0px 35px ;
     }
 }
-@media (max-width: 900px) { 
-    .filters-heading > svg {
-        
-    }
-    .filters {
-        width: 20%;
-        height: 100%;
-        border: 1px solid rgb(231, 231, 231);
-        border-radius: 20px;
-        padding-bottom: 20px;
-        padding-inline: 10px;
-    }
+@media (max-width: 1280px) { 
     .style {
         width: 80%;
     }
     
     .style-heading {
         padding: 0px 35px ;
+    }
+}
+@media (max-width: 1000px) { 
+    .filter-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 10px;
+    }
+    .filters {
+        display: none;
+    }
+    .style {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) { 
+    .filter-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 10px;
+    }
+    .filters {
+        display: none;
+    }
+    .style {
+        width: 100%;
+    }
+    
+    .style-heading {
+        flex-direction: column;
+        align-items: start;
+    }
+    .style-heading > div {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+@media (max-width: 650px) { 
+    .style-heading > div > h6 {
+        display: none;
+    }
+    .style-heading {
+        width: 100%;
+        margin-inline: auto;
     }
 }
 

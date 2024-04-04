@@ -44,12 +44,11 @@ import { cn } from "@/lib/utils"
   
 
 import './style.css'
-import { ChevronRightIcon, SlidersVertical } from "lucide-react"
+import { ChevronRightIcon, SlidersHorizontal, SlidersVertical, X } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import Products from "@/components/products"
-import FilterToogle from "@/components/ui/filter-toogle"
   
 
 interface StylePageProps {
@@ -203,7 +202,9 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
 
 
     return ( 
-        <div className="w-11/12 p-20 mx-auto">
+        <div className="style-page">
+            
+            
             <Breadcrumb className="ml-6 mb-6 text-gray-400">
                     <BreadcrumbList>
                         <BreadcrumbItem>
@@ -217,16 +218,21 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         </BreadcrumbItem>
                     </BreadcrumbList>
             </Breadcrumb>
+            
         <section className="flex gap-2">
-            {/* filters  */}
-            <div className="filters">
-            <Drawer direction="left">
-            <DrawerTrigger asChild>
+        <Drawer direction="bottom">
+            <DrawerTrigger className="filter-toggle" asChild>
                 <Button variant="outline" size="icon">
-                    <SlidersVertical />
+                    <SlidersHorizontal />
                 </Button>
             </DrawerTrigger>
-            <DrawerContent className="">
+            <DrawerContent className="px-5">
+            <div className="filters-heading flex justify-between items-center py-4 border-b border-gray-200">
+                    <h3 className="text-black text-lg font-bold">Filters</h3>
+                    <DrawerClose>
+                        <X />
+                    </DrawerClose>
+                </div>
             <div className="genre border-b border-gray-200 pb-3">
                     {
                         genre.map(({id,label,value}) =>
@@ -234,7 +240,11 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                             className="flex justify-between items-center my-2.5 text-gray-500 hover:text-gray-800 transition-all" 
                             key={id}
                             >
-                                <h4 className="text-sm" >{label}</h4>
+                                <h4 className="text-sm" >
+                                <DrawerClose>
+                                    {label}
+                                </DrawerClose>
+                                </h4>
                                 <ChevronRightIcon size={18}/>
                             </Link>
                         )
@@ -268,7 +278,7 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         <AccordionItem value="colors">
                             <AccordionTrigger className="text-black text-md font-bold hover:no-underline">Colors</AccordionTrigger>
                             <AccordionContent>
-                                <div className='grid grid-cols-4 gap-4 mt-2'>
+                                <div className='grid md:grid-cols-6 grid-cols-4 gap-4 mt-2'>
                                     {
                                         colors.map((color,index) =>
                                             <div key={index} className={`color ${color === selectedColor && 'selected'}`}>
@@ -287,7 +297,7 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         <AccordionItem value="sizes">
                             <AccordionTrigger className="text-black text-md font-bold hover:no-underline">Sizes</AccordionTrigger>
                             <AccordionContent>
-                                <div className='grid grid-cols-3 gap-4 mt-2'>
+                                <div className='grid md:grid-cols-6 grid-cols-4 gap-4 mt-2'>
                                     {
                                         sizes.map(({id,value,name} : any) =>
                                             <div key={id} className={`size ${value === selectedSize && 'selected'}`}>
@@ -312,7 +322,11 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                                             className="flex justify-between items-center my-2.5 text-gray-500 hover:text-gray-800 transition-all" 
                                             key={id}
                                             >
-                                                <h4 className="text-sm" >{label}</h4>
+                                                <h4 className="text-sm" >
+                                                <DrawerClose>
+                                                    {label}
+                                                </DrawerClose>
+                                                </h4>
                                                 <ChevronRightIcon size={18}/>
                                             </Link>
                                         )
@@ -321,8 +335,15 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         </AccordionItem>
                     </Accordion>
                 </div>
+
+                <Button className="lg:w-1/2 md:w-2/3 w-5/6 mx-auto rounded-3xl my-5">Apply Filters</Button>
             </DrawerContent>
             </Drawer>
+            
+            {/* filters  */}
+            
+            <div className="filters">
+            
                 <div className="filters-heading flex justify-between py-4 items-center border-b border-gray-200">
                     <h3 className="text-black text-lg font-bold">Filters</h3>
                     <SlidersVertical size={20} className="text-gray-500"/>
@@ -348,7 +369,7 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                             <AccordionTrigger className="text-black text-md font-bold hover:no-underline">Price</AccordionTrigger>
                             <AccordionContent>
                             <div className="wrapper mt-5 mb-8">
-                                <div className="slider ">
+                                <div className="slider">
                                     <div className={`progress`} style={{left : `${priceMinPar}%`, right : `${priceMaxPar}%`}}/>
                                     <h3 className="absolute text-xs font-semibold top-3" style={{left : `${priceMinPar - priceMinPar/7}%`}} >{priceMin} $</h3>
                                     <h3 className="absolute text-xs font-semibold -top-5" style={{right : `${priceMaxPar - priceMaxPar/7}%`}} >{priceMax} $</h3>
@@ -369,7 +390,7 @@ const StylePage : React.FC<StylePageProps> = ({params}) => {
                         <AccordionItem value="colors">
                             <AccordionTrigger className="text-black text-md font-bold hover:no-underline">Colors</AccordionTrigger>
                             <AccordionContent>
-                                <div className='grid grid-cols-4 gap-4 mt-2'>
+                                <div className='colors-grid mt-2'>
                                     {
                                         colors.map((color,index) =>
                                             <div key={index} className={`color ${color === selectedColor && 'selected'}`}>

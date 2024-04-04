@@ -3,4 +3,39 @@
     margin-inline: auto;
     padding-bottom: 20px;
     border-bottom: 1px solid rgb(226, 226, 226);
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1280px) { 
+    .products > div > div > .card-image {
+        width: 180px;
+        height: 180px;
+    }
+}
+@media (max-width: 1025px) { 
+    .products > div > div > .card-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+@media (max-width: 768px) { 
+    .products > div  {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 650px) { 
+    .products > div > div > .card-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width: 500px) { 
+    .products > div > div > .card-image {
+        width: 350px;
+        height: 350px;
+    }
+    .products > div  {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 }
