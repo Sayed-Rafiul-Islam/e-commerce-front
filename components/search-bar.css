@@ -2,6 +2,7 @@
     height: 35px;
     border-radius: 10px;
     padding-left: 20px;
+    padding-right: 75px;
     background: rgb(237, 237, 237);
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -27,11 +28,12 @@
 .search-bar-on {
     position: absolute; 
     display: flex;
-    justify-content: space-evenly;
-    width: 30%;
+    justify-content: end;
+    column-gap: 10px;
+    width: fit-content;
+    right: 10px;
+    top: 0px;
     padding-block: 4px;
-    top: 50px;
-    right: 90px;
     border-radius: 10px;
     opacity: 100%;
     transition-duration: 0.5s;
@@ -40,49 +42,27 @@
 .search-bar-off {
     position: absolute; 
     display: flex;
-    justify-content: space-evenly;
-    width: 30%;
+    justify-content: end;
+    column-gap: 10px;
+    width: fit-content;
+    right: 10px;
+    top: 0px;
     padding-block: 4px;
-    top: 50px;
-    right: 90px;
     border-radius: 10px;
     opacity: 0%;
     transition-duration: 0.5s;
     z-index: 1;
 }
-.cancel-btn {
-    color: white;
-    background: rgb(218, 1, 1);
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-.cancel-btn:hover {
-    color: white;
-    background: red;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-.search-btn {
-    color: white;
-    background: rgb(42, 42, 42);
-    padding: 5px 15px;
-    border-radius: 5px;
-}
-.search-btn:hover {
-    color: white;
-    background: black;
-    padding: 5px 15px;
-    border-radius: 5px;
-}
 @media (max-width: 900px) { 
     .search-bar-on {
         position: absolute; 
         display: flex;
-        justify-content: space-evenly;
-        width: 30%;
+        justify-content: end;
+        column-gap: 10px;
+        width: fit-content;
+        right: 10px;
+        top: 0px;
         padding-block: 4px;
-        top: 50px;
-        right: 80px;
         border-radius: 10px;
         opacity: 100%;
         transition-duration: 0.5s;
@@ -91,11 +71,12 @@
     .search-bar-off {
         position: absolute; 
         display: flex;
-        justify-content: space-evenly;
-        width: 30%;
+        justify-content: end;
+        column-gap: 10px;
+        width: fit-content;
+        right: 10px;
+        top: 0px;
         padding-block: 4px;
-        top: 50px;
-        right: 80px;
         border-radius: 10px;
         opacity: 0%;
         transition-duration: 0.5s;
@@ -108,6 +89,20 @@
 }
 
 @media (max-width: 600px) { 
+    .sm-search {
+        position: absolute; 
+        display: flex;
+        justify-content: end;
+        column-gap: 10px;
+        width: fit-content;
+        right: 50px;
+        top: 10px;
+        padding-block: 4px;
+        border-radius: 10px;
+        opacity: 100%;
+        transition-duration: 0.5s;
+        z-index: 1;
+    }
     .search-bar-on {
         display: none;
     }
@@ -142,22 +137,6 @@
         transition-duration: 0.5s;
         width: 100%;
         z-index: -1;
-    }
-    .sm-search-bar-on div {
-        margin-block: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        transition-duration: 0.5s;
-
-    }
-    .sm-search-bar-off div {
-        margin-block: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        transition-duration: 0.5s;
-
     }
     .sm-search-bar-off input {
         height: 35px;

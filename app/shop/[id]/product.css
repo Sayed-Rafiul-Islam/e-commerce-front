@@ -13,19 +13,19 @@
 
 @media (max-width: 1400px) { 
     .gallery {
-        width: 40%;
+        width: 60%;
     }
     .info {
-        width: 70%;
+        width: 40%;
 
     }
 }
 @media (max-width: 1200px) { 
     .gallery {
-        width: 30%;
+        width: 80%;
     }
     .info {
-        width: 50%;
+        width: 40%;
     }
     .product-section-1 {
         width: 100%;
@@ -35,7 +35,15 @@
 }
 @media (max-width: 1100px) { 
     .gallery {
-        width: 30%;
+        width: 60%;
+    }
+    .info {
+        width: 45%;
+    }
+}
+@media (max-width: 970px) { 
+    .gallery {
+        width: 50%;
     }
 }
 @media (max-width: 860px) { 

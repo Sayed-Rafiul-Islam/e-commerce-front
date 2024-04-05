@@ -61,24 +61,25 @@ const Reviews = () => {
     // const [sortBy,setSortBy] = useState(sortOptions[0])
     return ( 
         <div className="mt-8 w-11/12 mx-auto flex flex-col">
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between md:items-center">
                 <h3 className="font-bold">All Reviews <span className="text-xs font-medium text-gray-400">({reviews.length})</span></h3>
-                <div className="flex items-center gap-x-6">
-                    <button><SlidersHorizontal /></button>
-                    {/* <button className="hidden items-center md:flex">{sortBy} <ChevronDown size={15}/></button> */}
-                    <Select>
-                                <SelectTrigger className="w-32 h-7 border-none text-xs">
-                                    <SelectValue placeholder={selects[0].label} />
-                                </SelectTrigger>
-
-                                <SelectContent>
-                                    {
-                                        selects.map(({id,label,value}) =>
-                                        <SelectItem key={id} className="h-7 text-xs" value={value}>{label}</SelectItem>
-                                        )
-                                    }
-                                </SelectContent>
-                            </Select>
+                <div className="flex md:flex-row flex-col items-center gap-6">
+                    <div className="flex items-center gap-2">
+                        <button><SlidersHorizontal /></button>
+                        {/* <button className="hidden items-center md:flex">{sortBy} <ChevronDown size={15}/></button> */}
+                        <Select>
+                            <SelectTrigger className="w-32 h-7 border-none text-xs">
+                                <SelectValue placeholder={selects[0].label} />
+                            </SelectTrigger>
+                            <SelectContent>
+                                {
+                                    selects.map(({id,label,value}) =>
+                                    <SelectItem key={id} className="h-7 text-xs" value={value}>{label}</SelectItem>
+                                    )
+                                }
+                            </SelectContent>
+                        </Select>
+                    </div>
                     <Button size='sm'>Write a Review</Button>
                 </div>
             </div>

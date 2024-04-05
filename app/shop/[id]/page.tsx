@@ -50,7 +50,8 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
             rating : 4,
             price : 200,
             discount : 10,
-            description : 'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.'
+            description : 'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
+            details : 'Introducing our classic Black T-Shirt, a versatile staple for your wardrobe. Crafted with premium quality material, this shirt offers a sleek and timeless appeal. Its understated elegance makes it perfect for casual outings or layering with your favorite pieces for a trendy look. The comfortable fit and soft fabric ensure all-day wearability, while the crew neckline adds a touch of sophistication. Whether paired with jeans for a laid-back vibe or dressed up with a blazer for a more polished ensemble, this black tee effortlessly complements any style. Upgrade your basics with our Black T-Shirt today and experience unmatched comfort and style.'
         },
         {
             id : 2,
@@ -60,7 +61,9 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
             rating : 4.5,
             price : 1200,
             discount : 15,
-            description : 'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.'
+            description : 'This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
+            details : `
+            Introducing our Check Shirt, a modern twist on a timeless classic. Crafted with meticulous attention to detail, this shirt features a sophisticated checkered pattern that adds depth and dimension to your ensemble. Made from high-quality fabric, it offers both durability and comfort, ensuring a stylish look that lasts. The versatile design makes it suitable for a range of occasions, from casual gatherings to more formal events. With its button-down collar and tailored fit, this shirt exudes refinement and charm. Whether paired with chinos for a casual weekend outing or worn under a blazer for a smart-casual look, our Check Shirt effortlessly elevates your style. Embrace sophistication with every wear and make a statement with our Check Shirt today.`
         },
         {
             id : 3,
@@ -70,7 +73,9 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
             rating : 2,
             price : 800,
             discount : 0,
-            description : 'This graphic pants which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.'
+            description : 'This graphic pants which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
+            details : `
+            Introducing our timeless Blue Jeans, a wardrobe essential that never goes out of style. Crafted from premium denim, these jeans offer both durability and comfort, ensuring a perfect fit that molds to your body over time. The classic blue hue adds versatility, effortlessly pairing with a variety of tops for endless styling options. With a flattering slim fit and timeless five-pocket design, these jeans exude a modern yet timeless appeal. Whether dressed up with a crisp shirt and blazer for a polished look or paired with a casual tee for laid-back vibes, our Blue Jeans are perfect for any occasion. Embrace effortless style and comfort with our classic Blue Jeans today.`
         },
         {
             id : 4,
@@ -80,7 +85,9 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
             rating : 3.5,
             price : 250,
             discount : 10,
-            description : 'This graphic shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.'
+            description : 'This graphic shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.',
+            details : `
+            Introducing our vibrant Orange T-Shirt, a bold addition to your wardrobe that exudes confidence and personality. Crafted from premium cotton, this shirt offers a soft and comfortable feel against your skin, making it perfect for all-day wear. The striking orange hue adds a pop of color to any outfit, instantly elevating your style and making a statement wherever you go. With a classic crew neckline and a relaxed fit, this t-shirt offers both comfort and versatility, allowing you to effortlessly pair it with your favorite jeans or shorts for a casual yet stylish look. Whether you're running errands or hanging out with friends, our Orange T-Shirt is sure to turn heads and brighten up your day. Upgrade your wardrobe with a burst of color and confidence with our Orange T-Shirt today.`
         },
     ]
 
@@ -131,12 +138,13 @@ const ProductPage : React.FC<ProductPageProps> = async ({params}) => {
                             <TabsTrigger value="reviews">Reviews</TabsTrigger>
                             <TabsTrigger value="faq">FAQ</TabsTrigger>
                         </TabsList>
-                        <TabsContent value="details">
-
+                        <TabsContent className="lg:mx-20 md:mx-15 mx-5 mt-10" value="details">
+                            <p className="text-gray-400 text-justify">{product[0].details}</p>
                         </TabsContent>
                         <TabsContent value="reviews">
                             <Reviews />
                         </TabsContent>
+
                         <TabsContent value="faq">
                         <Accordion type="single" collapsible>
                             <AccordionItem className="lg:mx-20 md:mx-15 mx-5" value="item-1">
