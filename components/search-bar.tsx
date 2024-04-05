@@ -1,5 +1,5 @@
 "use client"
-import { Search, SearchIcon, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import './search-bar.css'
 import { useState } from 'react';
 
@@ -17,7 +17,7 @@ const SearchBar = () => {
                     placeholder="search for products..."
                 />
                 <div className={`${searchBtn ? 'search-bar-on' : 'search-bar-off'}`}>
-                    <SearchIcon className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' />
+                    <Search className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' />
                     <X className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' onClick={()=>{setSearchBtn(false)}} />
                 </div>
             </div>
@@ -34,7 +34,7 @@ const SearchBar = () => {
                     placeholder="search for products..."
                 />
                 <div className='sm-search'>
-                    <SearchIcon className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' />
+                    <Search className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' />
                     <X className='text-gray-500 hover:text-black hover:font-bold cursor-pointer transition-all' onClick={()=>{setSearchOpen(false)}} />
                 </div>
             </div>
